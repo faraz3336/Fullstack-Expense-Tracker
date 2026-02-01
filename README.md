@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1 align="center">🌟 My Wallet - Expense tracking app 🌟</h1>
 
 <p align="center">
