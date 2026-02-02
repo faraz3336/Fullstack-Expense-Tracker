@@ -94,7 +94,7 @@ spring.mail.password=YOUR_PASSWORD
 
 ### Step 4: Run the frontend
 
-1. Navigate to [frontend direcory](https://github.com/DharshiBalasubramaniyam/Fullstack-Expense-Tracker/tree/main/frontend).
+1. Navigate to [frontend direcory](https://github.com/Faraz3336/Fullstack-Expense-Tracker/tree/main/frontend).
 ```
 cd ./frontend
 ```
