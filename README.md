@@ -109,61 +109,142 @@ npm start
 
 Create a new account using your email to get started!
 
+## 📁 Project Structure
+
+```
+Fullstack-Expense-Tracker/
+│
+├── backend/                 # Spring Boot Application
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/expensetracker/
+│   │   │   │   ├── config/        # Security, CORS, and other configurations
+│   │   │   │   ├── controller/    # REST API endpoints
+│   │   │   │   ├── dto/           # Data Transfer Objects (Request/Response)
+│   │   │   │   ├── model/         # Entity classes (User, Transaction, Category, etc.)
+│   │   │   │   ├── repository/    # Data access layer (JPA repositories)
+│   │   │   │   ├── security/      # JWT authentication and authorization logic
+│   │   │   │   ├── service/       # Business logic layer
+│   │   │   │   └── util/          # Helper classes and utilities
+│   │   │   │
+│   │   │   └── resources/
+│   │   │       ├── application.properties    # Database, email, JWT configurations
+│   │   │       └── static/                   # (Optional) Static resources
+│   │   │
+│   │   └── test/                   # Unit and integration tests
+│   │
+│   ├── pom.xml                    # Maven dependencies and build configuration
+│   └── target/                    # Compiled application (generated)
+│
+├── frontend/                # React.js Application
+│   ├── public/
+│   │   ├── index.html
+│   │   └── ...              # Other static assets
+│   │
+│   ├── src/
+│   │   ├── api/                    # Axios setup and API call functions
+│   │   ├── assets/                 # Images, icons, fonts
+│   │   ├── components/             # Reusable UI components (Buttons, Modals, Cards)
+│   │   ├── constants/              # Application-wide constants
+│   │   ├── contexts/               # React Context for state management (e.g., Auth)
+│   │   ├── pages/                  # Main page components
+│   │   │   ├── auth/               # Login, Register, ForgotPassword pages
+│   │   │   ├── user/               # User Dashboard, Transactions, Budget, Stats
+│   │   │   └── admin/              # Admin panels for User, Category, Transaction management
+│   │   ├── styles/                 # CSS or SCSS files
+│   │   ├── utils/                  # Helper functions (formatters, validators)
+│   │   ├── App.js                  # Main app component with routing
+│   │   └── index.js                # Application entry point
+│   │
+│   ├── package.json                # NPM dependencies and scripts
+│   └── README.md                   # Frontend-specific setup instructions
+│
+├── .gitignore                     # Git ignore rules for both frontend and backend
+├── LICENSE                        # MIT License
+└── README.md                      # Project overview and main documentation
+```
+
 ## 📸 Screenshots
 
-### 🎨 Landing & Authentication
+### 🎨 Welcome & Authentication
 
-<div align="center">
+#### Welcome Page
+![Welcome Page](IMAGE_URL_1)
+*Landing page with financial growth visualization and call-to-action buttons*
 
-| Welcome Page | Login |
-|:---:|:---:|
-| ![Welcome](https://github.com/user-attachments/assets/246340e7-97d9-44ea-985b-33fd43e21546)| ![Login](https://github.com/user-attachments/assets/13ce9c4a-f350-4431-8c97-4f7b44a9327b) |
+#### Login Page
+![Login](IMAGE_URL_2)
+*Secure login form with email and password fields*
 
-| Register | Forgot Password |
-|:---:|:---:|
-| ![Register](https://github.com/user-attachments/assets/4ba76e70-eb88-40f2-b49e-c1f55ebc6742) | ![Forgot Password](https://github.com/user-attachments/assets/c7789af9-889c-40cb-9cc1-ff15f9bbd3a9) |
+#### Register Page
+![Register](IMAGE_URL_3)
+*User registration with form validation and terms agreement*
 
-</div>
+#### Forgot Password
+![Forgot Password](IMAGE_URL_4)
+*Password recovery through email verification*
+
+---
 
 ### 👤 User Dashboard & Features
 
-<div align="center">
+#### Dashboard Overview
+![Dashboard](IMAGE_URL_5)
+*Comprehensive dashboard showing income (Rs. 15000), expenses (Rs. 8540), cash in hand (Rs. 6460), and budget tracking with interactive charts*
 
-| Dashboard Overview | Transaction History |
-|:---:|:---:|
-| ![Dashboard](https://github.com/user-attachments/assets/a3b90cc7-1503-4392-b9b7-51034fc7c617) | ![Transaction History](https://github.com/user-attachments/assets/fd0e70a8-e49d-4731-94c3-3c391b9fda66) |
+#### Transaction History
+![Transaction History](IMAGE_URL_6)
+*Complete list of all transactions with date grouping, search, and filter options*
 
-| New Transaction | Edit Transaction |
-|:---:|:---:|
-| ![New Transaction](https://github.com/user-attachments/assets/7f340764-4168-462a-8682-4a7a1a1b157f) | ![Edit Transaction](https://github.com/user-attachments/assets/aa2692ff-9dbe-46a8-a852-9ac6b3adf612) |
+#### New Transaction
+![New Transaction](IMAGE_URL_7)
+*Add new expense or income with category selection (Other, Food, Leisure, Household, Clothing, Education, Healthcare)*
 
-| Saved Transactions | Statistics |
-|:---:|:---:|
-| ![Saved Transactions](https://github.com/user-attachments/assets/24203057-3254-4315-a3a8-6c33f22dcd8f) | ![Statistics](https://github.com/user-attachments/assets/e62db563-92a0-42a5-9a20-3c9fef1796fb) |
+#### Edit Transaction
+![Edit Transaction](IMAGE_URL_8)
+*Edit existing transaction details with delete option*
 
-| User Settings |
-|:---:|
-| ![User Settings](https://github.com/user-attachments/assets/6f1492ba-8a27-46bd-b2c1-f8f9441c5b22) |
+#### Saved Transactions
+![Saved Transactions](IMAGE_URL_9)
+*Manage recurring transactions with reminders (Labour fee - 3 days overdue, Electricity - Due on Today, School fee - Monthly)*
 
-</div>
+#### Statistics & Analytics
+![Statistics](IMAGE_URL_10)
+*Visual spending insights with line charts showing expense and income trends over months*
+
+#### User Settings
+![User Settings](IMAGE_URL_11)
+*Profile management with avatar upload and password change functionality*
+
+---
 
 ### 👑 Admin Panel
 
-<div align="center">
+#### Admin Transaction Management
+![Admin Transactions](IMAGE_URL_12)
+*View all user transactions across the platform with search and pagination (1 to 10 of 47 records)*
 
-| Admin Transactions | User Management |
-|:---:|:---:|
-| ![Admin Transactions](https://github.com/user-attachments/assets/90805c27-cd26-4bc5-9c67-8a04ae11a5b0) | ![User Management](https://github.com/user-attachments/assets/c560c78e-8440-4531-abce-19f44cda5118) |
+#### User Management
+![User Management](IMAGE_URL_13)
+*Manage all registered users with enable/disable controls, showing total expenses, income, and transaction count*
 
-| Category Management | New Category |
-|:---:|:---:|
-| ![Categories](https://github.com/user-attachments/assets/6967a281-7b77-451b-af8f-dcfcb9cc681b) | ![New Category](https://github.com/user-attachments/assets/b8edfd51-77f6-4dc7-a0a8-eb48ca2f0084) |
+#### Category Management
+![Categories](IMAGE_URL_14)
+*Manage expense and income categories (Salary, Food, Leisure, Household, Clothing, Education, Healthcare, Sales, Awards, Interest)*
 
-| Edit Category | Admin Settings |
-|:---:|:---:|
-| ![Edit Category](https://github.com/user-attachments/assets/3a7e937c-4f04-4565-b375-bc4dc5a2a8d4) | ![Admin Settings](https://github.com/user-attachments/assets/b106ec6b-210a-4dff-be00-8245bbee6179) |
+#### New Category
+![New Category](IMAGE_URL_15)
+*Add new transaction category with type selection (Expense/Income)*
 
-</div>
+#### Edit Category
+![Edit Category](IMAGE_URL_16)
+*Edit existing category details with save and cancel options*
+
+#### Admin Settings
+![Admin Settings](IMAGE_URL_17)
+*Admin profile settings with avatar management and password security*
+
+---
 
 ## 🛠️ Technologies Used
 
